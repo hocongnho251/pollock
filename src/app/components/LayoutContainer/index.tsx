@@ -18,15 +18,15 @@ interface Props {
 export function LayoutContainer(props: Props) {
   return (
     <Layout>
-      <Header style={{ background: 'white' }}>
+      <HeaderCustom>
         <HeaderContent />
-      </Header>
+      </HeaderCustom>
       <Content>
         <Div>{props.children}</Div>
       </Content>
-      <Footer>
+      <FooterCustom>
         <FooterContent />
-      </Footer>
+      </FooterCustom>
     </Layout>
   );
 }
@@ -35,4 +35,12 @@ const Div = styled.div`
   min-height: 280px;
   padding: 24px;
   background: #fff;
+`;
+
+const HeaderCustom = styled(Header)`
+  background: white;
+`;
+
+const FooterCustom = styled(Footer)`
+  background: #292f3a;
 `;

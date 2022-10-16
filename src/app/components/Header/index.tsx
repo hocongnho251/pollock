@@ -36,6 +36,8 @@ export function Header(props: Props) {
 }
 
 const HeaderWrapper = styled.div`
+  max-width: 85%;
+  margin: auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -90,5 +92,3 @@ const ButtonWrapper = styled(Button)`
   height: 48px;
   margin-left: 20px;
 `;
-
-const MenuActive = styled.div``;
