@@ -14,6 +14,7 @@ import { GlobalStyle } from 'styles/global-styles';
 
 import { NotFoundPage } from './components/NotFoundPage/Loadable';
 import { useTranslation } from 'react-i18next';
+import { Login } from './pages/Login/Loadable';
 
 export function App() {
   const { i18n } = useTranslation();
@@ -28,6 +29,7 @@ export function App() {
       </Helmet>
 
       <Switch>
+        <Route exact path="/" component={Login} />
         <Route component={NotFoundPage} />
       </Switch>
       <GlobalStyle />
