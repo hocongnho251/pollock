@@ -17,7 +17,7 @@ export function Login(props: Props) {
 
   return (
     <LayoutContainer>
-      <h1>Main</h1>
+      <div>Main</div>
     </LayoutContainer>
   );
 }

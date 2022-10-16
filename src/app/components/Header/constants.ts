@@ -1,4 +1,4 @@
-import { KeyValue } from './types';
+import { KeyValue } from 'app/models';
 export const MENU_LIST: KeyValue[] = [
   {
     key: 'home',
