@@ -3,17 +3,19 @@
  * Header
  *
  */
-import * as React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components/macro';
 import { Button } from 'antd';
 import { ReactComponent as Logo } from '../../../assets/Logo.svg';
 import { ReactComponent as SearchIcon } from '../../../assets/Search.svg';
 import { ReactComponent as BagIcon } from '../../../assets/Bag.svg';
 import { MENU_LIST } from './constants';
+import { SignIn } from '../SignIn/Loadable';
 
 interface Props {}
 
 export function Header(props: Props) {
+  const [openSignUpModal, setOpenSignUpModal] = useState(false);
   return (
     <HeaderWrapper>
       <Logo />
@@ -29,8 +31,21 @@ export function Header(props: Props) {
         <IconButtonWrapper>
           <BagIcon />
         </IconButtonWrapper>
-        <ButtonWrapper type="primary">SIGN UP</ButtonWrapper>
+        <ButtonWrapper
+          type="primary"
+          onClick={() => {
+            setOpenSignUpModal(true);
+          }}
+        >
+          SIGN IN
+        </ButtonWrapper>
       </ActionsWrapper>
+      <SignIn
+        open={openSignUpModal}
+        onClose={() => {
+          setOpenSignUpModal(false);
+        }}
+      />
     </HeaderWrapper>
   );
 }

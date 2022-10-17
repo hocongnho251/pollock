@@ -3,21 +3,22 @@
  * Login
  *
  */
-import * as React from 'react';
-import styled from 'styled-components/macro';
-import { useTranslation } from 'react-i18next';
-import { messages } from './messages';
+import React from 'react';
 import { LayoutContainer } from 'app/components/LayoutContainer/Loadable';
+import { Button } from 'antd';
 
 interface Props {}
 
 export function Login(props: Props) {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { t, i18n } = useTranslation();
-
   return (
     <LayoutContainer>
-      <div>Main</div>
+      <Button
+        onClick={() => {
+          console.log('sss');
+        }}
+      >
+        Main
+      </Button>
     </LayoutContainer>
   );
 }
